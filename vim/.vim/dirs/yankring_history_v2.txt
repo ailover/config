@@ -1,0 +1,2 @@
+Plugin 'fisadev/vim-debug.vim',V
+let g:vim_debug_disable_mappings = 1,V
