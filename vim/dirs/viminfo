@@ -8,19 +8,48 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Vim_debug
+~MSle0~/foldmethod
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
 :q
+:wq
+:close
+:e .vimrc
+:sp .vimrc
+:vs .vimrc
+:vim .vimrc
+:help fold-commands
+:heop jedi-vim-installlation-manually
+:help jedi
+:PluginInstall
+:close!
+:quit
+:w
 :u
 :U
-:close
 :q!
-:wq
 :?
-:w
 
 # Search String History (newest to oldest):
+? \s\+$
+?/foldmethod
+?/fold
+?/simpy
+?/g:jedi#popup_select_first
+? \V\.\%#
+?/map
+?/mapl
+?/mapleader
+?/Youcom
+?/neocom
+?/completion
+?/caomple
+?/history
+?/NERd
+?/debug
 ?/Vim_debug
 ?/vim_debug
 
@@ -32,23 +61,25 @@
 
 # 寄存器:
 ""1	LINE	0
-	Plugin 'fisadev/vim-debug.vim'
-"2	LINE	0
+	autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 	
+"2	LINE	0
+	"折叠后显示文档字符串
 "3	LINE	0
+	let g:jedi#popup_select_first = 0
 	
 "4	LINE	0
-	
+	"
 "5	LINE	0
-	
+	"autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 "6	LINE	0
-	let g:vim_debug_disable_mappings = 1
+	"autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 "7	LINE	0
-	"let g:airline_symbols.linenr = '⭡'
+	Plugin ''
 "8	LINE	0
-	"let g:airline_symbols.readonly = '⭤'
+	gym.monitoring
 "9	LINE	0
-	"let g:airline_symbols.branch = '⭠'
+	Plugin 'fisadev/vim-debug.vim'
 "q	CHAR	0
 	;
 "z	LINE	0
@@ -56,147 +87,289 @@
 	
 
 # 文件标记:
-'0  279  8  ~/.vimrc
-'1  12  8  ~/tasks/NERD_tree_1
-'2  210  0  ~/.vimrc
-'3  298  0  ~/.vimrc
-'4  308  0  ~/.vimrc
-'5  37  0  ~/.vimrc
-'6  38  1  ~/.vimrc
-'7  1  0  ~/.vimrc
-'8  2  0  ~/tasks/test.py
-'9  1  8  ~/software/vim.sh
+'0  9  0  ~/tasks/test.py
+'1  578  20  ~/.vimrc
+'2  11  3  ~/tasks/test.py
+'3  571  78  ~/.vimrc
+'4  7  46  ~/tasks/test.py
+'5  569  1  ~/.vimrc
+'6  572  0  ~/.vimrc
+'7  19  0  ~/tasks/test.py
+'8  139  0  ~/.vimrc
+'9  2  0  ~/tasks/test.py
 
 # 跳转列表 (从新到旧):
--'  279  8  ~/.vimrc
--'  210  8  ~/.vimrc
--'  36  0  ~/.vimrc
--'  12  8  ~/tasks/NERD_tree_1
--'  1  0  ~/tasks/NERD_tree_1
+-'  9  0  ~/tasks/test.py
+-'  11  4  ~/tasks/test.py
+-'  578  20  ~/.vimrc
+-'  571  0  ~/.vimrc
+-'  7  46  ~/tasks/test.py
+-'  569  0  ~/.vimrc
+-'  19  0  ~/tasks/test.py
+-'  570  12  ~/.vimrc
+-'  553  19  ~/.vimrc
+-'  552  25  ~/.vimrc
+-'  397  23  ~/.vimrc
+-'  396  8  ~/.vimrc
+-'  364  25  ~/.vimrc
+-'  107  24  ~/.vimrc
+-'  572  0  ~/.vimrc
+-'  139  0  ~/.vimrc
 -'  2  0  ~/tasks/test.py
--'  298  0  ~/.vimrc
--'  1  0  ~/.vimrc
--'  308  0  ~/.vimrc
--'  37  0  ~/.vimrc
--'  38  0  ~/.vimrc
--'  401  0  ~/.vimrc
--'  1  0  ~/tasks/test.py
--'  1  8  ~/software/vim.sh
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  2  0  ~/software/[Plugins]
--'  1  0  ~/software/[Plugins]
--'  3  0  ~/software/[Plugins]
--'  5  0  ~/software/[Plugins]
--'  1  8  ~/software/vim.sh
--'  1  0  ~/software/[Plugins]
--'  12  8  ~/tasks/NERD_tree_1
+-'  88  0  ~/.vimrc
+-'  575  0  ~/.vimrc
+-'  573  0  ~/.vimrc
+-'  6  0  ~/tasks/test.py
+-'  5  4  ~/tasks/test.py
+-'  212  0  ~/.vimrc
+-'  12  0  ~/NERD_tree_1
+-'  17  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  73  27  ~/.vimrc
+-'  71  0  ~/.vimrc
+-'  20  0  ~/NERD_tree_1
+-'  25  0  ~/NERD_tree_1
+-'  70  1  ~/.vimrc
+-'  559  0  ~/.vimrc
+-'  17  7  ~/software/config/NERD_tree_1
+-'  20  2  ~/software/config/NERD_tree_1
+-'  1  6  ~/software/config/NERD_tree_1
+-'  1  0  ~/software/config/vimrc
+-'  21  0  ~/software/config/NERD_tree_1
+-'  23  2  ~/software/config/NERD_tree_1
+-'  47  0  ~/tasks/NERD_tree_1
+-'  55  2  ~/tasks/NERD_tree_1
+-'  1  0  ~/tasks/NERD_tree_1
+-'  449  23  ~/.vimrc
+-'  68  16  ~/.vimrc
+-'  407  2  ~/.vimrc
+-'  415  6  ~/.vimrc
+-'  448  23  ~/.vimrc
+-'  447  21  ~/.vimrc
+-'  446  22  ~/.vimrc
+-'  444  26  ~/.vimrc
+-'  443  26  ~/.vimrc
+-'  441  7  ~/.vimrc
+-'  439  11  ~/.vimrc
+-'  438  15  ~/.vimrc
+-'  434  7  ~/.vimrc
+-'  433  7  ~/.vimrc
+-'  431  7  ~/.vimrc
+-'  430  7  ~/.vimrc
+-'  429  7  ~/.vimrc
+-'  427  7  ~/.vimrc
+-'  426  7  ~/.vimrc
+-'  425  7  ~/.vimrc
+-'  424  7  ~/.vimrc
+-'  423  7  ~/.vimrc
+-'  422  7  ~/.vimrc
+-'  420  7  ~/.vimrc
+-'  419  7  ~/.vimrc
+-'  417  7  ~/.vimrc
+-'  416  7  ~/.vimrc
+-'  453  0  ~/.vimrc
+-'  75  30  ~/.vimrc
+-'  66  38  ~/.vimrc
+-'  546  0  ~/.vimrc
+-'  526  7  ~/.vimrc
+-'  116  0  ~/.vimrc
+-'  280  15  ~/.vimrc
+-'  279  17  ~/.vimrc
+-'  12  0  ~/NERD_tree_1
+-'  17  0  ~/NERD_tree_1
+-'  12  0  ~/NERD_tree_1
+-'  17  0  ~/NERD_tree_1
+-'  1  0  ~/NERD_tree_1
+-'  578  20  ~/.vimrc
+-'  571  0  ~/.vimrc
+-'  8  0  ~/tasks/test.py
+-'  569  0  ~/.vimrc
+-'  570  12  ~/.vimrc
+-'  553  19  ~/.vimrc
+-'  552  25  ~/.vimrc
+-'  397  23  ~/.vimrc
+-'  396  8  ~/.vimrc
+-'  364  25  ~/.vimrc
+-'  107  24  ~/.vimrc
+-'  572  0  ~/.vimrc
+-'  139  0  ~/.vimrc
 
 # 文件内的标记历史记录 (从新到旧):
 
-> ~/.vimrc
-	"	279	8
-	^	210	9
-	.	34	0
-	+	1	0
-	+	1	0
-	+	402	0
-	+	308	0
-	+	208	0
-	+	207	0
-	+	206	8
-	+	207	8
-	+	208	8
-	+	210	0
-	+	209	15
-	+	35	0
-	+	34	0
-
 > ~/tasks/test.py
-	"	3	28
-	^	3	29
-	.	4	0
+	"	9	0
+	^	8	0
+	.	7	46
 	+	1	21
-	+	3	0
+	+	2	10
 	+	2	8
-	+	3	29
-	+	4	0
+	+	2	39
+	+	5	0
+	+	5	0
+	+	5	0
+	+	3	0
+	+	3	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	7	46
+
+> ~/.vimrc
+	"	578	20
+	^	578	21
+	.	578	20
+	+	1	0
+	+	1	0
+	+	416	0
+	+	322	0
+	+	222	0
+	+	221	0
+	+	220	8
+	+	221	8
+	+	222	8
+	+	224	0
+	+	223	15
+	+	35	0
+	+	34	1
+	+	103	24
+	+	105	0
+	+	107	29
+	+	106	10
+	+	110	36
+	+	108	0
+	+	109	10
+	+	579	0
+	+	568	0
+	+	570	31
+	+	66	25
+	+	69	0
+	+	71	31
+	+	68	0
+	+	70	36
+	+	414	0
+	+	417	0
+	+	420	0
+	+	422	0
+	+	423	0
+	+	424	0
+	+	425	0
+	+	426	0
+	+	427	0
+	+	429	0
+	+	430	0
+	+	431	0
+	+	430	0
+	+	431	0
+	+	433	0
+	+	434	0
+	+	436	0
+	+	438	0
+	+	440	0
+	+	441	0
+	+	443	0
+	+	444	0
+	+	446	1
+	+	447	0
+	+	448	0
+	+	449	0
+	+	575	28
+	+	576	0
+	+	71	0
+	+	72	32
+	+	73	27
+	+	572	15
+	+	573	68
+	+	574	69
+	+	575	32
+	+	139	0
+	+	575	0
+	+	575	78
+	+	575	0
+	+	570	0
+	+	570	36
+	+	570	36
+	+	569	16
+	+	571	77
+	+	572	0
+	+	553	36
+	+	571	78
+	+	577	19
+	+	578	20
+
+> ~/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> /usr/share/vim/vim74/doc/fold.txt.gz
+	"	426	57
+	.	591	0
+	+	591	0
 
 > ~/tasks/NERD_tree_1
-	"	12	8
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.vim/bundle/jedi-vim/doc/jedi-vim.txt
+	"	33	5
+
+> ~/.vim/bundle/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+
+> ~/software/config/NERD_tree_1
+	"	6	6
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/software/config/vimrc
+	"	1	0
+
+> ~/software/config/vim/dirs/viminfo
+	"	4	1
+
+> ~/.vim/NERD_tree_1
+	"	4	0
 	.	1	0
 	+	1	0
 
@@ -228,16 +401,6 @@
 	.	35	0
 	+	35	0
 	+	35	0
-
-> ~/NERD_tree_1
-	"	5	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
 
 > ~/[Vundle] Installer
 	"	45	0

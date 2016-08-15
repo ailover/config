@@ -1,9 +1,0 @@
-autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<,V
-"折叠后显示文档字符串,V
-",V
-"autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<,V
-"autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr,V
-Plugin '',V
-gym.monitoring,V
-Plugin 'fisadev/vim-debug.vim',V
-let g:vim_debug_disable_mappings = 1,V
