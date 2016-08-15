@@ -574,5 +574,3 @@ let g:jedi#use_tabs_not_buffers = 1 "使用tabs跳转到定义的地方
 let g:jedi#use_splits_not_buffers = "right" "分隔窗口时在右边
 "设置backspace键的功能
 set backspace=indent,eol,start
-"设置折叠方法
-set foldmethod=indent
