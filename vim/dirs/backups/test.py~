@@ -1,0 +1,17 @@
+import gym
+env = gym.make("CartPole-v0")
+# print env.__dict__
+# print env.ale.getScreenRGB()
+env.monitor.start('./tmp/airraid', force=True)
+for i_episode in range(20):
+    print i_episode
+    observation = env.reset()
+    for t in range(100):
+        env.render()
+
+        # env.ale.getScreenRGB()
+        action = env.action_space.sample()
+        # env.ale.getScreenRGB()
+        print t, action
+        observation, reward, done, info = env.step(action)
+env.monitor.close()
